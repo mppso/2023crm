@@ -206,6 +206,9 @@ div#about-section {
     .navigation-auto {
       margin-top: 270px;
     }
+    .scroll-down {
+      visibility: hidden;
+    }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -214,6 +217,9 @@ div#about-section {
     div#header > h4 {font-size: 28px;}
     .slider,.slide img,.navigation-manual,.navigation-auto,.map-container > iframe{
       width: 600px;
+    }
+    .scroll-down {
+      visibility: visible;
     }
 }
 @media only screen and (min-height: 800px) {
