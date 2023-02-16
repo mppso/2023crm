@@ -1,0 +1,264 @@
+@font-face {font-family: 'OCR A Std';font-style: normal;font-weight: normal;src: local('OCR A Std'), url('../fonts/OCRAStd.woff') format('woff');}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+.ocr{font-family: 'OCR A Std';}
+.qs{font-family: 'Quicksand', sans-serif;}
+body {
+  background: #ebebeb;
+}
+div#cover-page{
+    min-height: 100vh;
+    background-image: url("../img/bg.png");
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div#father_container{
+    position: relative;
+}
+#particles-js{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+#cover {
+    position: static;
+}
+#cover > nav {
+    margin-bottom: 50px;
+}
+div#header {
+    margin: auto;
+}
+div#header > h1 {
+    margin-bottom: 50px;
+}
+.scroll-down {
+  border: 2px solid #fff;
+  border-radius: 20px;
+  bottom: 60px;
+  height: 50px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 30px;
+}
+.scroll-down::before {
+  animation: scrollDownAnimation 2s infinite;
+  background-color: #fff;
+  border-radius: 100%;
+  content: '';
+  height: 6px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 6px;
+}
+div#about-section {
+  padding-top: 25px;
+}
+div#about-section > h5 {
+  font-size: 20px;
+}
+img.about-logo {
+  width: 100px;
+  height: 100px;
+}
+div#about-section {
+  background-image: url(../img/bg-2.png);
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section-header {
+  background-image: url(../img/birth.jpg);
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 45vh;
+}
+.section-header > h1{
+  font-size: 50px;
+  font-weight: bold;
+}
+.btn-font-large {
+  font-size: 18px;
+}
+.bg-skyblue {
+  background: linear-gradient(316deg, #9fc9f8, #bcd4f0, #d1e1f3);
+  background-size: 600% 600%;
+  animation: BGradient 8s ease infinite;
+}
+.bg-pink {
+  background: linear-gradient(316deg, #f9d5ff, #ffe4fc, #fbecff);
+  background-size: 600% 600%;
+  animation: BGradient 8s ease infinite;
+}
+.bg-grey {
+  background: linear-gradient(316deg, #b9b9b9, #e4e4e4, #ffffff);
+  background-size: 600% 600%;
+  animation: BGradient 8s ease infinite;
+}
+.slider {
+  width: 768px;
+  height: 512px;
+  overflow: hidden;
+}
+.slides {
+  width: 500%;
+  height: 512px;
+  display: flex;
+}
+.slides input {
+  display: none;
+}
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+.slide img {
+  width: 768px;
+  height: 512px;
+}
+.navigation-manual {
+  position: absolute;
+  width: 768px;
+  margin-top: -30px;
+  display: flex;
+  justify-content: center;
+}
+.manual-btn, .navigation-auto div {
+  border: 2px solid #fcfcfc;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.manual-btn:not(:last-child),.navigation-auto div:not(:last-child){
+  margin-right: 15px;
+}
+.manual-btn:hover,#radio1:checked ~ .navigation-auto .auto-btn1,#radio2:checked ~ .navigation-auto .auto-btn2,#radio3:checked ~ .navigation-auto .auto-btn3,#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #fcfcfc;
+}
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 768px;
+  justify-content: center;
+  margin-top: 482px;
+}
+.map-container > iframe {
+  width: 768px;
+  height: 512px;
+}
+
+@keyframes BGradient {
+  0%{background-position:7% 0%}
+  50%{background-position:94% 100%}
+  100%{background-position:7% 0%}
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #img-logo{width:95vw;}
+    div#cover-page{background-position: 65% 35%;}
+    div#header > h1 {
+      font-size: 28px;
+    }
+    div#header > h4 {
+      font-size: 18px;
+    }
+    img.about-logo {
+      width: 80px;
+      height: 80px;
+    }
+    div#about-section > h5 {
+      font-size: 14px;
+    }
+    .slider,.slides,.slide img, .map-container > iframe{
+      height: 300px;
+    }
+    .slider,.slide img,.navigation-manual,.navigation-auto,.map-container > iframe{
+      width: 100%;
+    }
+    .navigation-manual {
+      margin-top: -30px;
+    }
+    .navigation-auto {
+      margin-top: 270px;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    div#cover-page,div#about-section{background-position: 75% 25%;}
+    div#header > h1 {font-size: 40px;}
+    div#header > h4 {font-size: 28px;}
+    .slider,.slide img,.navigation-manual,.navigation-auto,.map-container > iframe{
+      width: 600px;
+    }
+}
+@media only screen and (min-height: 800px) {
+  div#cover-page,div#about-section{background-position: 75% 25%;}
+  div#header > h1 {
+    font-size: 36px;
+  }
+  div#header > h4 {
+    font-size: 26px;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  div#header > h1 {
+    font-size: 50px;
+  }
+  div#header > h4 {
+    font-size: 30px;
+  }
+  .slider,.slide img,.navigation-manual,.navigation-auto,.map-container > iframe{
+    width: 768px;
+  }
+}
+
+@-moz-keyframes scrollDownAnimation {
+  0% {opacity: 0;transform: translate(0, 0);}
+  40% {opacity: 1;}
+  80% {opacity: 0;transform: translate(0, 20px);}
+  100% {opacity: 0;}
+}
+@-webkit-keyframes scrollDownAnimation {
+  0% {opacity: 0;transform: translate(0, 0);}
+  40% {opacity: 1;}
+  80% {opacity: 0;transform: translate(0, 20px);}
+  100% {opacity: 0;}
+}
+@-o-keyframes scrollDownAnimation {
+  0% {opacity: 0;transform: translate(0, 0);}
+  40% {opacity: 1;}
+  80% {opacity: 0;transform: translate(0, 20px);}
+  100% {opacity: 0;}
+}
+@keyframes scrollDownAnimation {
+  0% {opacity: 0;transform: translate(0, 0);}
+  40% {opacity: 1;}
+  80% {opacity: 0;transform: translate(0, 20px);}
+  100% {opacity: 0;}
+}
